@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/UN0wen/Argenta-v3/lib"
 	"github.com/andersfylling/disgord"
 	"github.com/andersfylling/disgord/std"
 	"github.com/sirupsen/logrus"
@@ -53,7 +54,7 @@ func main() {
 		},
 		Presence: &disgord.UpdateStatusPayload{
 			Game: &disgord.Activity{
-				Name: "write " + prefix + "ping",
+				Name: "write " + config.Prefix + "ping",
 			},
 		},
 		// I WANT DM EVENTS
@@ -72,7 +73,7 @@ func main() {
 
 	logFilter, _ := std.NewLogFilter(client)
 	filter, _ := std.NewMsgFilter(context.Background(), client)
-	filter.SetPrefix(prefix)
+	filter.SetPrefix(config.Prefix)
 
 	// create a handler and bind it to new message events
 	// thing about the middlewares are whitelists or passthrough functions.
