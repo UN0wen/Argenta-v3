@@ -1,0 +1,12 @@
+database:
+  url: postgresql://postgres:postgres@127.0.0.1:5432/argenta
+  hostname: 127.0.0.1
+  port: 5432
+  username: postgres
+  password: postgres
+  name: argenta
+bot:
+  token: Your token here
+  owner: 41771983423143937
+  id: 41771983423143937
+prefix: 
